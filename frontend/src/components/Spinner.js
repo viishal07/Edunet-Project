@@ -1,12 +1,15 @@
-import React from 'react'
-import logo from "../assets/loader.gif"
-import { Container } from 'react-bootstrap'
+import React from 'react';
+import loader from '../assets/loader.gif';
+import './Spinner.css';
+import './Spinner.css';
+
+
 const Spinner = () => {
   return (
-    <Container className="mt-5"  style={{position: 'relative', zIndex: "2 !important", display: "flex", alignItems: "center", justifyContent: "center"}}>
-        <img className="mt-5" src={logo} alt="loading" width="250px" height="250px"/>
-    </Container>
-  )
-}
+    <div className="spinner-container fade-in">
+      <img src={loader} alt="Loading..." className="spinner-image bounce" />
+    </div>
+  );
+};
 
-export default Spinner
+export default Spinner;

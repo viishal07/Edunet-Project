@@ -1,0 +1,35 @@
+.line-progress-container {
+    width: 100%;
+    margin-bottom: 10px;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .progress-label {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    transition: width 1s ease-in-out;
+  }
+  
+  .animated-fill {
+    animation: progressAnimation 1s ease-in-out forwards;
+  }
+  
+  @keyframes progressAnimation {
+    from {
+      width: 0;
+    }
+  }
+  

@@ -8,3 +8,32 @@
 .btnStyle:hover{
     background-color: rgb(75, 11, 11);
 }
+
+button {
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+    background-color: #4caf50; /* Change color on hover */
+  }
+  
+  .input-field {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  input:focus + label,
+  input:not(:placeholder-shown) + label {
+    transform: translateY(-30px);
+    color: #4caf50;
+    font-size: 12px;
+  }
+  
+  label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transition: all 0.3s;
+  }
+  

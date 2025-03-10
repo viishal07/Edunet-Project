@@ -1,25 +1,14 @@
 import React from 'react';
+import './LineProgressBar.css';
+import './LineProgressBar.css';
+
 
 const LineProgressBar = ({ label, percentage, lineColor }) => {
   return (
-    <div className="container">
-      <div className="d-flex justify-content-between align-items-center mb-2">
-        <span>{label}</span>
-        <span>{percentage}%</span>
-      </div>
-      <div className="progress" style={{ height: '24px' }}>
-        <div
-          className="progress-bar"
-          role="progressbar"
-          style={{
-            width: `${percentage}%`,
-            backgroundColor: lineColor,
-            transition: 'width 1s ease-in-out',
-          }}
-          aria-valuenow={percentage}
-          aria-valuemin="0"
-          aria-valuemax="100"
-        ></div>
+    <div className="line-progress-container fade-in">
+      <div className="progress-label">{label} <span>{percentage}%</span></div>
+      <div className="progress-bar">
+        <div className="progress-fill animated-fill" style={{ width: `${percentage}%`, backgroundColor: lineColor }}></div>
       </div>
     </div>
   );
